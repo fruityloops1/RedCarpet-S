@@ -1,0 +1,5 @@
+Language:        Cpp
+BasedOnStyle: WebKit
+Standard: c++17
+QualifierAlignment: Left
+WhitespaceSensitiveMacros: ["SEAD_ENUM", "SEAD_ENUM_EX", "SEAD_ENUM_EX_VALUES"]
