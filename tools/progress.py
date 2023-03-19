@@ -36,7 +36,13 @@ def getCommit(hash: Commit):
             return row
     return None
 
-cur_commit = getCommit(repo.commit())
+def getCurrentCommit():
+    reader = csv.reader(StringIO(subprocess.check_output(["tools/common/progress.py", "--csv"]).decode('utf-8')), delimiter=',', quotechar='"')
+    for row in reader:
+        return row
+    return None
+
+cur_commit = getCurrentCommit()
 
 x_values = [datetime.datetime.now()]
 y_values = [(int(cur_commit[5]) / int(cur_commit[3])) * 100]
