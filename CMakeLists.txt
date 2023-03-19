@@ -18,7 +18,9 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-add_executable(RedCarpet-S)
+file(GLOB_RECURSE CXXSOURCEFILES "Source/*.cpp")
+
+add_executable(RedCarpet-S ${CXXSOURCEFILES})
 target_include_directories(RedCarpet-S PRIVATE src)
 target_compile_definitions(RedCarpet-S PRIVATE NON_MATCHING)
 target_compile_options(RedCarpet-S PRIVATE -fno-rtti -fno-exceptions)
@@ -33,7 +35,6 @@ set(NN_SDK_MINOR 4)
 set(NN_SDK_PATCH 0)
 set(NN_SDK_TYPE "Release")
 
-# todo: figure out actual number, in between odyssey and splatoon
 set(NN_WARE_MAJOR 10)
 set(NN_WARE_MINOR 4)
 set(NN_WARE_PATCH 0)
@@ -51,8 +52,6 @@ add_subdirectory(lib/aal)
 target_link_libraries(RedCarpet-S PRIVATE aal)
 
 add_subdirectory(lib/eui)
-target_link_libraries(RedCarpet-S PRIVATE aal)
-
-add_subdirectory(src)
+target_link_libraries(RedCarpet-S PRIVATE eui)
 
 target_include_directories(RedCarpet-S PRIVATE include)
