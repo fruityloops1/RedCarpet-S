@@ -49,8 +49,7 @@ bool ByamlIter::isTypeArray() const { return mContainerHeader != nullptr && mCon
 bool ByamlIter::isTypeHash() const { return mContainerHeader != nullptr && mContainerHeader->getType() == ByamlDataType::Hash; }
 bool ByamlIter::isTypeContainer() const { return mContainerHeader != nullptr && (mContainerHeader->getType() == ByamlDataType::Array || mContainerHeader->getType() == ByamlDataType::Hash); }
 
-// commented out because the differ explodes
-/*bool ByamlIter::isExistKey(const char* pKey) const
+bool ByamlIter::isExistKey(const char* pKey) const
 {
     if (isTypeHash()) {
         ByamlStringTableIter stringIter(mData + mHeader->mHashKeyOffset);
@@ -61,7 +60,7 @@ bool ByamlIter::isTypeContainer() const { return mContainerHeader != nullptr && 
         }
     }
     return false;
-}*/
+}
 
 int ByamlIter::getKeyIndex(const char* key) const
 {
