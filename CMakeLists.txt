@@ -1,7 +1,6 @@
-cmake_minimum_required(VERSION 3.13)
+cmake_minimum_required(VERSION 3.4)
 project(RedCarpet-S CXX)
 
-set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 # Use response files when linking objects because of the large number of source files
 set(CMAKE_CXX_USE_RESPONSE_FILE_FOR_OBJECTS ON)
 if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
@@ -17,10 +16,12 @@ endif()
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-file(GLOB_RECURSE CXXSOURCEFILES "Source/*.cpp")
+file(GLOB_RECURSE CXXSOURCEFILES "src/*.cpp")
 
 add_executable(RedCarpet-S ${CXXSOURCEFILES})
+target_include_directories(RedCarpet-S PRIVATE include)
 target_include_directories(RedCarpet-S PRIVATE src)
 target_compile_definitions(RedCarpet-S PRIVATE NON_MATCHING)
 target_compile_options(RedCarpet-S PRIVATE -fno-rtti -fno-exceptions)
@@ -54,4 +55,3 @@ target_link_libraries(RedCarpet-S PRIVATE aal)
 add_subdirectory(lib/eui)
 target_link_libraries(RedCarpet-S PRIVATE eui)
 
-target_include_directories(RedCarpet-S PRIVATE include)
