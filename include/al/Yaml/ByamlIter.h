@@ -19,7 +19,6 @@ class ByamlIter {
 
 public:
     ByamlIter();
-    ByamlIter(const ByamlIter& rhs);
     ByamlIter(const u8* pData);
     ByamlIter(const u8* pData, const u8* pRootNode);
 
@@ -67,6 +66,12 @@ public:
     bool tryConvertInt(s32* pOut, const ByamlData* pData) const;
     bool tryConvertFloat(float* pOut, const ByamlData* pData) const;
     bool tryConvertUInt(u32* pOut, const ByamlData* pData) const;
+
+    void set(const ByamlIter& pOther)
+    {
+        mData = pOther.mData;
+        mRootNode = pOther.mRootNode;
+    }
 
     const ByamlHeader* getHeader() const { return mHeader; }
 };

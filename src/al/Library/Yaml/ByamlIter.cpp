@@ -3,17 +3,10 @@
 #include "al/Yaml/ByamlHashIter.h"
 #include "al/Yaml/ByamlIter.h"
 #include "al/Yaml/ByamlStringTableIter.h"
-#include <new>
 
 namespace al {
 
 ByamlIter::ByamlIter() = default;
-
-ByamlIter::ByamlIter(const ByamlIter& rhs)
-    : mData(rhs.mData)
-    , mRootNode(rhs.mRootNode)
-{
-}
 
 ByamlIter::ByamlIter(const u8* pData)
     : mData(pData)
@@ -140,6 +133,7 @@ ByamlIter ByamlIter::getIterFromData(const ByamlData& pData) const
     return ByamlIter();
 }
 
+#ifdef NON_MATCHING
 ByamlIter ByamlIter::getIterByIndex(s32 pIdx) const
 {
     ByamlData data;
@@ -158,7 +152,6 @@ ByamlIter ByamlIter::getIterByKey(const char* pKey) const
     return getIterFromData(data);
 }
 
-#ifdef NON_MATCHING
 bool ByamlIter::tryGetIterByIndex(ByamlIter* pOut, s32 pIdx) const
 {
     *pOut = getIterByIndex(pIdx);
