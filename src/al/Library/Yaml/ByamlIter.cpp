@@ -31,6 +31,8 @@ ByamlIter::ByamlIter(const u8* pData, const u8* pRootNode)
 {
 }
 
+bool ByamlIter::isValid() const { return mData != nullptr; }
+
 s32 ByamlIter::getSize() const
 {
     if (isTypeContainer())

@@ -1,5 +1,3 @@
-#pragma once
-
 #include "al/Scene/SceneObjHolder.h"
 #include "al/Scene/SceneObjUtil.h"
 
