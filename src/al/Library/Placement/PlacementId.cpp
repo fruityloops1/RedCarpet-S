@@ -1,6 +1,8 @@
 #include "al/Placement/PlacementId.h"
 #include "al/Placement/PlacementInfo.h"
 
+#include "Game/System/GameDataHolder.h"
+
 namespace al {
 
 PlacementId::PlacementId() = default;
@@ -21,8 +23,8 @@ void PlacementId::init(const PlacementInfo& pInfo)
     mLayerConfigName = nullptr;
     pInfo.getPlacementIter().tryGetStringByKey(&mCommonId, "CommonId");
     pInfo.getPlacementIter().tryGetStringByKey(&mLayerConfigName, "LayerConfigName");
-    pInfo.getUnitConfigIter().tryGetStringByKey(&mUnitConfigName, "UnitConfigName");
-    pInfo.getUnitConfigIter().tryGetStringByKey(&mUnitConfigId, "Id");
+    pInfo.getZoneIter().tryGetStringByKey(&mUnitConfigName, "UnitConfigName");
+    pInfo.getZoneIter().tryGetStringByKey(&mUnitConfigId, "Id");
     pInfo.getPlacementIter().tryGetStringByKey(&mPlacementId, "Id");
 }
 

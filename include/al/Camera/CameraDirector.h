@@ -1,9 +1,9 @@
 #pragma once
 
 #include "al/Audio/AudioKeeper.h"
-#include "gfx/seadCamera.h"
-#include "math/seadVectorFwd.h"
+#include <gfx/seadCamera.h>
 #include <gfx/seadProjection.h>
+#include <math/seadVectorFwd.h>
 
 namespace al {
 

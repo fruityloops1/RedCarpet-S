@@ -63,4 +63,13 @@ public:
         bool pUnk);
 };
 
+class LiveActor;
+
+void initActorPoseTFGSV(LiveActor* pActor);
+void initActorPoseTFSV(LiveActor* pActor);
+void initActorPoseTQSV(LiveActor* pActor);
+void initActorPoseTRMSV(LiveActor* pActor);
+void initActorPoseTRSV(LiveActor* pActor);
+void initActorSRT(LiveActor* pActor, const ActorInitInfo& pInfo);
+
 } // namespace al

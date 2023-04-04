@@ -26,4 +26,6 @@ public:
     virtual EffectKeeper* getEffectKeeper() const = 0;
 };
 
+void tryDeleteEffect(IUseEffectKeeper* pUser, const char* pEffectName);
+
 } // namespace al

@@ -21,6 +21,7 @@ public:
     ByamlIter();
     ByamlIter(const u8* pData);
     ByamlIter(const u8* pData, const u8* pRootNode);
+    ByamlIter(const ByamlIter& pOther);
 
     bool isEqualData(const ByamlIter& other) const;
 

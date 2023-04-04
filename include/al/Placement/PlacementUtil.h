@@ -29,6 +29,31 @@ bool tryGetTrans(sead::Vector3f* pOut, const ActorInitInfo& pInfo);
 bool tryGetTrans(sead::Vector3f* pOut, const PlacementInfo& pInfo);
 void getTrans(sead::Vector3f* pOut, const PlacementInfo& pInfo);
 bool tryGetZoneMatrixTR(sead::Matrix34f* pOut, const PlacementInfo& pInfo);
+bool tryGetRotate(sead::Vector3f* pOut, const ActorInitInfo& pInfo);
+bool tryGetRotate(sead::Vector3f* pOut, const PlacementInfo& pInfo);
+bool tryGetRotate_ParentY(sead::Vector3f* pOut, const ActorInitInfo& pInfo);
+bool tryGetRotate_ParentY(sead::Vector3f* pOut, const PlacementInfo& pInfo);
+bool tryGetZoneR(sead::Vector3f* pOut, const PlacementInfo& pInfo);
+void getRotate(sead::Vector3f* pOut, const PlacementInfo& pInfo);
+bool tryGetQuat(sead::Quatf* pOut, const ActorInitInfo& pInfo);
+bool tryGetQuat(sead::Quatf* pOut, const PlacementInfo& pInfo);
+void getQuat(sead::Quatf* pOut, const PlacementInfo& pInfo);
+bool tryGetScale(sead::Vector3f* pOut, const ActorInitInfo& pInfo);
+bool tryGetScale(sead::Vector3f* pOut, const PlacementInfo& pInfo);
+bool tryGetSide(sead::Vector3f* pOut, const ActorInitInfo& pInfo);
+bool tryGetSide(sead::Vector3f* pOut, const PlacementInfo& pInfo);
+bool tryGetUp(sead::Vector3f* pOut, const ActorInitInfo& pInfo);
+bool tryGetUp(sead::Vector3f* pOut, const PlacementInfo& pInfo);
+bool tryGetFront(sead::Vector3f* pOut, const ActorInitInfo& pInfo);
+bool tryGetFront(sead::Vector3f* pOut, const PlacementInfo& pInfo);
+bool tryGetLocalAxis(sead::Vector3f* pOut, const ActorInitInfo& pInfo, int pAxis);
+bool tryGetLocalAxis(sead::Vector3f* pOut, const PlacementInfo& pInfo, int pAxis);
+
+bool tryGetArg(float* pOut, const al::ActorInitInfo& pInfo, const char* pKey);
+bool tryGetArg(bool* pOut, const al::ActorInitInfo& pInfo, const char* pKey);
+
+int calcLinkChildNum(const al::ActorInitInfo& pInfo, const char* pLinkName);
+void getLinksInfo(PlacementInfo* pOut, const PlacementInfo& pParentInfo, const char* pLinkName);
 
 s32 tryGetLayerID(const ByamlIter& pInfo);
 

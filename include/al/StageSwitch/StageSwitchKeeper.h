@@ -1,5 +1,7 @@
 #pragma once
 
+#include "al/Functor/FunctorBase.h"
+
 namespace al {
 
 class PlacementInfo;
@@ -28,5 +30,10 @@ public:
     virtual StageSwitchKeeper* getStageSwitchKeeper() const = 0;
     virtual void initStageSwitchKeeper();
 };
+
+bool tryOnStageSwitch(al::IUseStageSwitch* pUser, const char* pName);
+bool tryOffStageSwitch(al::IUseStageSwitch* pUser, const char* pName);
+void listenStageSwitchOn(al::IUseStageSwitch* pUser, const char* pName, const FunctorBase& pFunctor);
+void listenStageSwitchOff(al::IUseStageSwitch* pUser, const char* pName, const FunctorBase& pFunctor);
 
 } // namespace al

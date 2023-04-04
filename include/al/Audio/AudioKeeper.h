@@ -9,6 +9,7 @@ class AudioDirector;
 class AudioSituationDirector;
 class BgmKeeper;
 class ModelKeeper;
+class MeInfo;
 class SeKeeper;
 
 class AudioKeeper {

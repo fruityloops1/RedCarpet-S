@@ -25,4 +25,18 @@ bool isEqualString(const char* pStr1, const char* pStr2) NO_INLINE;
 bool isEqualString(const sead::SafeString& pStr1, const sead::SafeString& pStr2);
 bool isEqualStringCase(const char* pStr1, const char* pStr2);
 
+template <s32 L>
+class StringTmp : public sead::FixedSafeString<L> {
+public:
+    StringTmp(const char* format, ...)
+        : sead::FixedSafeString<L>()
+    {
+        std::va_list args;
+        va_start(args, format);
+        this->formatV(format, args);
+        va_end(args);
+    }
+    ~StringTmp() = default;
+};
+
 } // namespace al

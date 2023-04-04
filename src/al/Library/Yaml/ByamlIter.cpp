@@ -135,7 +135,6 @@ ByamlIter ByamlIter::getIterFromData(const ByamlData& pData) const
     return ByamlIter();
 }
 
-#ifdef NON_MATCHING
 ByamlIter ByamlIter::getIterByIndex(s32 pIdx) const
 {
     ByamlData data;
@@ -166,6 +165,7 @@ bool ByamlIter::tryGetIterByKey(ByamlIter* pOut, const char* pKey) const
     return pOut->isValid();
 }
 
+#ifdef NON_MATCHING
 bool ByamlIter::tryGetIterAndKeyNameByIndex(ByamlIter* pOut, const char** pKey, s32 pIdx) const
 {
     ByamlData data;
