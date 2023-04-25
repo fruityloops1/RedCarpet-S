@@ -154,9 +154,6 @@ public:
     void initScreenPointKeeper(int pTargetAmount);
     void initShadowKeeper(ShadowKeeper*);
 
-    friend void bindSklAnimRetargetting(const LiveActor* pActor, const SklAnimRetargettingInfo* pInfo);
-    friend ActorParamHolder* getActorParamHolder(LiveActor* pActor);
-
     ActorPoseKeeperBase* getActorPoseKeeper() const { return mActorPoseKeeper; }
     SubActorKeeper* getSubActorKeeper() const { return mSubActorKeeper; }
     PlacementHolder* getPlacementHolder() const { return mPlacementHolder; }

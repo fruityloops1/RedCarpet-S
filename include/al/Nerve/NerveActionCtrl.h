@@ -33,7 +33,7 @@ class NerveActionCollector {
 public:
     NerveActionCollector();
 
-    void addNerve(al::NerveAction* nerve);
+    void addNerve(al::NerveAction* pNerve);
 
     static NerveActionCollector* getCurrentCollector() { return sCurrentCollector; }
     friend class al::NerveActionCtrl;

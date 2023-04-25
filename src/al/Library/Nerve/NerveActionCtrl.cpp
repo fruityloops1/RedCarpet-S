@@ -15,14 +15,14 @@ NerveActionCollector::NerveActionCollector()
     sCurrentCollector = this;
 }
 
-void NerveActionCollector::addNerve(al::NerveAction* nerve)
+void NerveActionCollector::addNerve(al::NerveAction* pNerve)
 {
     if (mStartNode == nullptr) {
-        mStartNode = nerve;
-        mEndNode = nerve;
+        mStartNode = pNerve;
+        mEndNode = pNerve;
     } else {
-        mEndNode->mNextNode = nerve;
-        mEndNode = nerve;
+        mEndNode->mNextNode = pNerve;
+        mEndNode = pNerve;
     }
     mNumNodes++;
 }

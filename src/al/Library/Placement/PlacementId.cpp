@@ -1,8 +1,6 @@
 #include "al/Placement/PlacementId.h"
 #include "al/Placement/PlacementInfo.h"
 
-#include "Game/System/GameDataHolder.h"
-
 namespace al {
 
 PlacementId::PlacementId() = default;
