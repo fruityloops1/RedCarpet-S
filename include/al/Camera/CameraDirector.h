@@ -56,18 +56,18 @@ public:
     CameraDirector(s32, AreaObjDirector*, CollisionDirector*);
 
     void init(const PlayerHolder*);
-    void setCameraFromCameraArea(const AreaObj* pObj);
-    void initAudioKeeper(ActorInitInfo& pInfo);
+    void setCameraFromCameraArea(const AreaObj* obj);
+    void initAudioKeeper(ActorInitInfo& info);
 
     AudioKeeper* getAudioKeeper() const override;
     void reviseCameraInfo(SceneCameraInfo*);
     void update(bool);
-    bool isAppearCameraFrame(const sead::LookAtCamera& pCamera) const;
+    bool isAppearCameraFrame(const sead::LookAtCamera& camera) const;
     bool isPlayerOutsideCameraFrame() const;
     bool isSubCameraGyroMode() const;
     float getSnapshotRollDeg();
     void setGoalPosPtr(const sead::Vector3f*);
-    void setStageName(const char* pStageName);
+    void setStageName(const char* stageName);
     void setCameraMode(s32);
     s32 getCameraMode();
     void switchCameraMode();
@@ -76,9 +76,9 @@ public:
     bool isUserControlMoveLimited() const;
     bool isDisplayCameraIcon() const;
     bool isInCameraIconDisplayArea() const;
-    void invalidUserCameraControlByPort(s32 pPort);
-    void validUserCameraControlByPort(s32 pPort);
-    void validUserCameraControlByPortOnly(s32 pPort);
+    void invalidUserCameraControlByPort(s32 port);
+    void validUserCameraControlByPort(s32 port);
+    void validUserCameraControlByPortOnly(s32 port);
     bool isRequestGyroMode() const;
     void resetRequestGyroModeFlag();
     bool isRequestOffGyroMode() const;

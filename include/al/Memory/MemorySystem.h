@@ -13,7 +13,7 @@ public:
 
 class MemorySystem;
 
-void createSceneHeap(const char* pStageName);
+void createSceneHeap(const char* stageName);
 
 sead::Heap* getSequenceHeap();
 

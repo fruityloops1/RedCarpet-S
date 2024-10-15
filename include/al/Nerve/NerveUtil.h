@@ -6,26 +6,26 @@ namespace al {
 
 class NerveStateBase;
 
-void setNerve(IUseNerve* pUser, const Nerve* pNrv);
-void setNerveAtStep(IUseNerve* pUser, const Nerve* pNrv, s32 pStep);
-bool isStep(const IUseNerve* pUser, s32 pStep);
-bool isNerve(const IUseNerve* pUser, const Nerve* pNrv);
-s32 getNerveStep(const IUseNerve* pUser);
-const Nerve* getNerve(const IUseNerve* pUser);
-bool isFirstStep(const IUseNerve* pUser);
-bool isLessStep(const IUseNerve* pUser, s32 pCmp);
-bool isLessEqualStep(const IUseNerve* pUser, s32 pCmp);
-bool isGreaterStep(const IUseNerve* pUser, s32 pCmp);
-bool isGreaterEqualStep(const IUseNerve* pUser, s32 pCmp);
-bool isIntervalStep(const IUseNerve* pUser, s32 pInterval, s32 pUnk = 0);
-bool isNewNerve(const IUseNerve* pUser);
-float calcNerveRate(const IUseNerve* pUser, s32 pRate);
-float calcNerveRate(const IUseNerve* pUser, s32 pRate, s32);
-float calcNerveValue(const IUseNerve* pUser, s32, s32, float, float);
-float calcNerveJumpValue(const IUseNerve* pUser, s32, s32, s32, float);
-void initNerveState(IUseNerve* pUser, NerveStateBase* pState, const Nerve* pHostStateNrv, const char* pName);
-void addNerveState(IUseNerve* pUser, NerveStateBase* pState, const Nerve* pHostStateNrv, const char* pName);
-bool updateNerveState(IUseNerve* pUser);
-bool updateNerveStateAndNextNerve(IUseNerve* pUser, const Nerve* pNextNrv);
+void setNerve(IUseNerve* user, const Nerve* nerve);
+void setNerveAtStep(IUseNerve* user, const Nerve* nerve, s32 step);
+bool isStep(const IUseNerve* user, s32 step);
+bool isNerve(const IUseNerve* user, const Nerve* nerve);
+s32 getNerveStep(const IUseNerve* user);
+const Nerve* getNerve(const IUseNerve* user);
+bool isFirstStep(const IUseNerve* user);
+bool isLessStep(const IUseNerve* user, s32 compare);
+bool isLessEqualStep(const IUseNerve* user, s32 compare);
+bool isGreaterStep(const IUseNerve* user, s32 compare);
+bool isGreaterEqualStep(const IUseNerve* user, s32 compare);
+bool isIntervalStep(const IUseNerve* user, s32 interval, s32 unk = 0);
+bool isNewNerve(const IUseNerve* user);
+float calcNerveRate(const IUseNerve* user, s32 rate);
+float calcNerveRate(const IUseNerve* user, s32 rate, s32);
+float calcNerveValue(const IUseNerve* user, s32, s32, float, float);
+float calcNerveJumpValue(const IUseNerve* user, s32, s32, s32, float);
+void initNerveState(IUseNerve* user, NerveStateBase* state, const Nerve* hostStateNrv, const char* name);
+void addNerveState(IUseNerve* user, NerveStateBase* state, const Nerve* hostStateNrv, const char* name);
+bool updateNerveState(IUseNerve* user);
+bool updateNerveStateAndNextNerve(IUseNerve* user, const Nerve* nextNrv);
 
 } // namespace al

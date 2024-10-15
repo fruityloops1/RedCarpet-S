@@ -4,10 +4,10 @@ namespace al {
 
 class LiveActor;
 
-bool isDead(const LiveActor* pActor);
-bool isClipped(const LiveActor* pActor);
+bool isDead(const LiveActor* actor);
+bool isClipped(const LiveActor* actor);
 
-void onCollide(LiveActor* pActor);
-void offCollide(LiveActor* pActor);
+void onCollide(LiveActor* actor);
+void offCollide(LiveActor* actor);
 
 } // namespace al

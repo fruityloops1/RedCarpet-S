@@ -118,10 +118,10 @@ public:
     virtual void endFarLod();
     virtual bool isFarLodSwitchOkay();
     virtual bool canLinkYOffset() const;
-    virtual void attackSensor(HitSensor* pMe, HitSensor* pOther);
-    virtual bool receiveMsg(const SensorMsg* pMsg, HitSensor* pOther, HitSensor* pMe);
-    virtual bool receiveMsgScreenPoint(const SensorMsg* pMsg, ScreenPointer* pPointer, ScreenPointTarget* pTarget);
-    virtual bool receiveMsgScreenPointSM(const SensorMsg* pMsg, ScreenPointer* pPointer, ScreenPointTarget* pTarget);
+    virtual void attackSensor(HitSensor* me, HitSensor* other);
+    virtual bool receiveMsg(const SensorMsg* msg, HitSensor* other, HitSensor* me);
+    virtual bool receiveMsgScreenPoint(const SensorMsg* msg, ScreenPointer* pointer, ScreenPointTarget* target);
+    virtual bool receiveMsgScreenPointSM(const SensorMsg* msg, ScreenPointer* pointer, ScreenPointTarget* target);
     const char* getName() const override;
     virtual const sead::Matrix34f& getBaseMtx();
     EffectKeeper* getEffectKeeper() const override;
@@ -141,17 +141,17 @@ public:
 
     void initActionKeeper(const char*, const char*);
     void initActorPrePassLightKeeper(ActorPrePassLightKeeper*);
-    void initCollider(float pRadius, float pYOffset, u32);
+    void initCollider(float radius, float yOffset, u32);
     void initExecuteInfo(ActorExecuteInfo*);
-    void initHitSensor(int pSensorAmount);
+    void initHitSensor(int sensorAmount);
     void initItemKeeper(int);
     void initModelKeeper(ModelKeeper*);
     void initNerveKeeper(NerveKeeper*);
     void initPoseKeeper(ActorPoseKeeperBase*);
-    void initRailKeeper(const ActorInitInfo& pInfo);
+    void initRailKeeper(const ActorInitInfo& info);
     void initSceneInfo(ActorSceneInfo*);
     void initScoreKeeper();
-    void initScreenPointKeeper(int pTargetAmount);
+    void initScreenPointKeeper(int targetAmount);
     void initShadowKeeper(ShadowKeeper*);
 
     ActorPoseKeeperBase* getActorPoseKeeper() const { return mActorPoseKeeper; }

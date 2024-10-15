@@ -6,7 +6,7 @@ class LiveActor;
 
 class ActorPrePassLightKeeper;
 
-void appearPrePassLight(const LiveActor* pActor, const char*, int);
-void killPrePassLightAll(const LiveActor* pActor, int);
+void appearPrePassLight(const LiveActor* actor, const char*, int);
+void killPrePassLightAll(const LiveActor* actor, int);
 
 } // namespace al

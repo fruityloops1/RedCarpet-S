@@ -37,9 +37,9 @@ public:
     void checkStrikeSphere(const sead::Vector3f&, float, bool, const sead::Vector3f&);
     void checkStrikeArrow(const sead::Vector3f&, const sead::Vector3f&);
     void checkStrikeSphereForPlayer(const sead::Vector3f&, float);
-    void* getStrikeArrowInfo(s32 pIdx);
+    void* getStrikeArrowInfo(s32 idx);
     s32 getStrikeArrowInfoNum();
-    void* getStrikeSphereInfo(s32 pIdx);
+    void* getStrikeSphereInfo(s32 idx);
     void* getSphereHitInfoArrayForCollider(SphereHitInfo**, u32*);
     void execute() override;
     void searchCollisionPartsWithSphere();

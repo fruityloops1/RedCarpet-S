@@ -4,6 +4,6 @@ namespace al {
 
 class HitSensor;
 
-bool isSensorPlayer(const HitSensor* pSensor);
+bool isSensorPlayer(const HitSensor* sensor);
 
 } // namespace al

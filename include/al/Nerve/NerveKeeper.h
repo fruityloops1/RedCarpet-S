@@ -25,10 +25,10 @@ class NerveKeeper {
     NerveActionCtrl* mNerveActionCtrl = nullptr;
 
 public:
-    NerveKeeper(void* pNerveUser, const Nerve* pStartNerve, int pMaxNerveStates = 0);
+    NerveKeeper(void* nerveUser, const Nerve* startNerve, int maxNerveStates = 0);
 
     void update();
-    void setNerve(const Nerve* pNrv);
+    void setNerve(const Nerve* nerve);
     const Nerve* getCurrentNerve() const;
     void initNerveAction(NerveActionCtrl*);
 

@@ -33,7 +33,7 @@ class NerveActionCollector {
 public:
     NerveActionCollector();
 
-    void addNerve(al::NerveAction* pNerve);
+    void addNerve(al::NerveAction* nerve);
 
     static NerveActionCollector* getCurrentCollector() { return sCurrentCollector; }
     friend class al::NerveActionCtrl;
@@ -49,7 +49,7 @@ class NerveActionCtrl {
 
 public:
     NerveActionCtrl(alNerveFunction::NerveActionCollector* pCollector);
-    NerveAction* findNerve(const char* pName) const;
+    NerveAction* findNerve(const char* name) const;
 };
 
 } // namespace al

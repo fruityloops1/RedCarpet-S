@@ -23,10 +23,10 @@ private:
 public:
     NerveStateCtrl(int pMaxNerveStates);
 
-    void addState(NerveStateBase* pState, const Nerve* pNrv, const char* pName);
+    void addState(NerveStateBase* state, const Nerve* nerve, const char* name);
     bool updateCurrentState();
-    void startState(const Nerve* pNrv);
-    State* findStateInfo(const Nerve* pNrv);
+    void startState(const Nerve* nerve);
+    State* findStateInfo(const Nerve* nerve);
     bool isCurrentStateEnd() const;
     void tryEndCurrentState();
 };

@@ -6,6 +6,6 @@
 
 namespace alCameraFunction {
 
-void initCamera(al::CameraPoser_RS* pCamera, const al::IUseCamera_RS* pUser, const al::PlacementInfo& pInfo, const char*, int);
+void initCamera(al::CameraPoser_RS* camera, const al::IUseCamera_RS* user, const al::PlacementInfo& info, const char*, int);
 
 } // namespace alCameraFunction

@@ -14,18 +14,18 @@ class SubActorKeeper {
     LiveActor** mActors = nullptr;
 
 public:
-    SubActorKeeper(al::LiveActor* pActor, const al::ActorInitInfo& pInfo, const char*, int);
+    SubActorKeeper(al::LiveActor* actor, const al::ActorInitInfo& info, const char*, int);
 
-    static SubActorKeeper* tryCreate(al::LiveActor* pActor, const al::ActorInitInfo& pInfo, const char*, int);
+    static SubActorKeeper* tryCreate(al::LiveActor* actor, const al::ActorInitInfo& info, const char*, int);
 };
 
-void initSubActorKeeperNoFile(LiveActor* pActor, const ActorInitInfo& pInfo, int);
+void initSubActorKeeperNoFile(LiveActor* actor, const ActorInitInfo& info, int);
 
-LiveActor* getSubActor(const LiveActor*, int pIdx);
-LiveActor* getSubActor(const LiveActor* pActor, const char* pSubActorName);
-LiveActor* tryGetSubActor(const LiveActor* pActor, const char* pSubActorName);
-int getSubActorNum(const LiveActor* pActor);
+LiveActor* getSubActor(const LiveActor*, int idx);
+LiveActor* getSubActor(const LiveActor* actor, const char* subActorName);
+LiveActor* tryGetSubActor(const LiveActor* actor, const char* subActorName);
+int getSubActorNum(const LiveActor* actor);
 
-void registerSubActorSyncClipping(LiveActor* pParent, LiveActor* pSub, u64 = 0);
+void registerSubActorSyncClipping(LiveActor* parent, LiveActor* sub, u64 = 0);
 
 } // namespace al

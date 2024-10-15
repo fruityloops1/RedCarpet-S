@@ -8,6 +8,6 @@ public:
     LiveActor* mParent;
 }; // 0x38?
 
-void appearItemTiming(const LiveActor* pActor, const char* pItemName);
+void appearItemTiming(const LiveActor* actor, const char* itemName);
 
 } // namespace al

@@ -4,23 +4,23 @@
 
 namespace al {
 
-const sead::Vector3f& getVelocity(const LiveActor* pActor);
-sead::Vector3f* getVelocityPtr(LiveActor* pActor);
+const sead::Vector3f& getVelocity(const LiveActor* actor);
+sead::Vector3f* getVelocityPtr(LiveActor* actor);
 
-void setVelocity(LiveActor* pActor, const sead::Vector3f& pVelocity);
-void setVelocity(LiveActor* pActor, float x, float y, float z);
-void setVelocityX(LiveActor* pActor, float x);
-void setVelocityY(LiveActor* pActor, float y);
+void setVelocity(LiveActor* actor, const sead::Vector3f& velocity);
+void setVelocity(LiveActor* actor, float x, float y, float z);
+void setVelocityX(LiveActor* actor, float x);
+void setVelocityY(LiveActor* actor, float y);
 
 // ???
-void setVelocityZero(LiveActor* pActor);
-void setVelocityJump(LiveActor* pActor, float);
-void setVelocityToDirection(LiveActor* pActor, const sead::Vector3f&, float);
-void setVelocityToGravity(LiveActor* pActor, float pGravity);
-void addVelocityToGravity(LiveActor* pActor, float);
+void setVelocityZero(LiveActor* actor);
+void setVelocityJump(LiveActor* actor, float);
+void setVelocityToDirection(LiveActor* actor, const sead::Vector3f&, float);
+void setVelocityToGravity(LiveActor* actor, float gravity);
+void addVelocityToGravity(LiveActor* actor, float);
 
-float calcSpeed(const LiveActor* pActor);
-float calcSpeedH(const LiveActor* pActor);
-float calcSpeedV(const LiveActor* pActor);
+float calcSpeed(const LiveActor* actor);
+float calcSpeedH(const LiveActor* actor);
+float calcSpeedV(const LiveActor* actor);
 
 } // namespace al

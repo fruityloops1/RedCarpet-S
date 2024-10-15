@@ -10,9 +10,9 @@ class FunctorV0M : public al::FunctorBase {
     F mFuncPtr;
 
 public:
-    inline FunctorV0M(T pParent, F pFuncPtr)
-        : mFuncPtr(pFuncPtr)
-        , mParent(pParent)
+    inline FunctorV0M(T parent, F funcPtr)
+        : mFuncPtr(funcPtr)
+        , mParent(parent)
     {
     }
 

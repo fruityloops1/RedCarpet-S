@@ -38,7 +38,7 @@ class CameraDirector_RS : public IUseExecutor, public IUseCamera {
     // ...
 
 public:
-    void createCamera(CameraPoser_RS* pCamera, const PlacementId*, const char*, int, const sead::Matrix34f&, bool pRegisterTicket);
+    void createCamera(CameraPoser_RS* camera, const PlacementId*, const char*, int, const sead::Matrix34f&, bool registerTicket);
 };
 
 class IUseCamera_RS {

@@ -8,12 +8,12 @@ class NerveExecutor : public IUseNerve {
     al::NerveKeeper* mNerveKeeper = nullptr;
 
 public:
-    NerveExecutor(const char* pName);
+    NerveExecutor(const char* name);
 
     virtual NerveKeeper* getNerveKeeper() const;
     virtual ~NerveExecutor();
 
-    void initNerve(const Nerve* pStartNerve, int pMaxNerveStates = 0);
+    void initNerve(const Nerve* startNerve, int maxNerveStates = 0);
     void updateNerve();
 };
 

@@ -27,10 +27,10 @@ class AudioKeeper {
 public:
     AudioKeeper();
 
-    void init(const AudioDirector* pAudioDirector, const char*, const sead::Vector3f*, const sead::Matrix34f*, const ModelKeeper* pModelKeeper);
-    void initSeKeeper(const AudioDirector* pAudioDirector, const char*, const sead::Vector3f*, const sead::Matrix34f*, const ModelKeeper* pModelKeeper);
-    void initBgmKeeper(const AudioDirector* pAudioDirector, const char*);
-    void initOtherAudio(const AudioDirector* pAudioDirector);
+    void init(const AudioDirector* audioDirector, const char*, const sead::Vector3f*, const sead::Matrix34f*, const ModelKeeper* modelKeeper);
+    void initSeKeeper(const AudioDirector* audioDirector, const char*, const sead::Vector3f*, const sead::Matrix34f*, const ModelKeeper* modelKeeper);
+    void initBgmKeeper(const AudioDirector* audioDirector, const char*);
+    void initOtherAudio(const AudioDirector* audioDirector);
 
     void update();
     void validate();

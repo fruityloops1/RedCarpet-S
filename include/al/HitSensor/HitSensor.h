@@ -15,7 +15,7 @@ class HitSensor {
     const sead::Matrix34f* mFollowMtx = nullptr;
 
 public:
-    HitSensor(al::LiveActor* pHost, const char* pName, unsigned int, float, unsigned short, const sead::Vector3f*, const sead::Matrix34f*, const sead::Vector3f&);
+    HitSensor(al::LiveActor* host, const char* name, unsigned int, float, unsigned short, const sead::Vector3f*, const sead::Matrix34f*, const sead::Vector3f&);
 
     bool trySensorSort();
     void setFollowPosPtr(const sead::Vector3f*);

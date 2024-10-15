@@ -31,6 +31,15 @@ target_compile_options(RedCarpet-S PRIVATE -Wno-unused-parameter -Wno-unused-pri
 target_compile_options(RedCarpet-S PRIVATE -Wno-invalid-offsetof)
 target_compile_options(RedCarpet-S PRIVATE -Wextra-semi)
 
+set(SOURCES_OUTPUT_FILE "${CMAKE_BINARY_DIR}/.build_sources")
+file(WRITE ${SOURCES_OUTPUT_FILE} "")
+
+get_target_property(SOURCES_COMBINED RedCarpet-S SOURCES)
+
+foreach (SOURCE ${SOURCES_COMBINED})
+  file(APPEND ${SOURCES_OUTPUT_FILE} "${SOURCE}\n")
+endforeach()
+
 set(NN_SDK_MAJOR 10)
 set(NN_SDK_MINOR 4)
 set(NN_SDK_PATCH 0)

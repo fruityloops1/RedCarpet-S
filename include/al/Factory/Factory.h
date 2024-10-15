@@ -18,22 +18,22 @@ class Factory {
     al::ByamlIter mCreatorToClassNameTable;
 
 public:
-    inline Factory(const char* pFactoryName)
-        : mName(pFactoryName)
+    inline Factory(const char* factoryName)
+        : mName(factoryName)
         , mEntries(nullptr)
         , mEntryAmount(0)
     {
     }
     template <int N>
-    inline Factory(const char* pFactoryName, al::NameToCreator<T> (&pEntries)[N])
-        : mName(pFactoryName)
+    inline Factory(const char* factoryName, al::NameToCreator<T> (&entries)[N])
+        : mName(factoryName)
     {
-        initFactory(pEntries);
+        initFactory(entries);
     }
     template <int N>
-    inline void initFactory(al::NameToCreator<T> (&pEntries)[N])
+    inline void initFactory(al::NameToCreator<T> (&entries)[N])
     {
-        mEntries = pEntries;
+        mEntries = entries;
         mEntryAmount = N;
     }
 

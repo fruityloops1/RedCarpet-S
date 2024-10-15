@@ -6,6 +6,6 @@ namespace al {
 
 class LiveActor;
 
-void calcJointPos(sead::Vector3f* pOut, const LiveActor* pActor, const char* pJointName);
+void calcJointPos(sead::Vector3f* out, const LiveActor* actor, const char* jointName);
 
 } // namespace al

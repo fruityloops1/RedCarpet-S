@@ -5,14 +5,14 @@
 
 namespace al {
 
-void calcQuatSide(sead::Vector3f* pOut, const sead::Quatf& pQuat);
-void calcQuatUp(sead::Vector3f* pOut, const sead::Quatf& pQuat);
-void calcQuatFront(sead::Vector3f* pOut, const sead::Quatf& pQuat);
+void calcQuatSide(sead::Vector3f* out, const sead::Quatf& quat);
+void calcQuatUp(sead::Vector3f* out, const sead::Quatf& quat);
+void calcQuatFront(sead::Vector3f* out, const sead::Quatf& quat);
 
-void rotateQuatXDirDegree(sead::Quatf* pOut, const sead::Quatf& pFrom, float pDegrees);
-void rotateQuatYDirDegree(sead::Quatf* pOut, const sead::Quatf& pFrom, float pDegrees);
-void rotateQuatZDirDegree(sead::Quatf* pOut, const sead::Quatf& pFrom, float pDegrees);
+void rotateQuatXDirDegree(sead::Quatf* out, const sead::Quatf& from, float degrees);
+void rotateQuatYDirDegree(sead::Quatf* out, const sead::Quatf& from, float degrees);
+void rotateQuatZDirDegree(sead::Quatf* out, const sead::Quatf& from, float degrees);
 
-void rotateQuatRadian(sead::Quatf* pOut, const sead::Quatf& pFrom, const sead::Vector3f& pAxis, float pRadians);
+void rotateQuatRadian(sead::Quatf* out, const sead::Quatf& from, const sead::Vector3f& axis, float radians);
 
 } // namespace al

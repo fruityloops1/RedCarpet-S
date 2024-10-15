@@ -58,7 +58,7 @@ class CameraPoser_RS : public al::IUseAreaObj, public al::IUseAudioKeeper, publi
     sead::Vector3f* mOrthoProjectionParam = nullptr;
 
 public:
-    CameraPoser_RS(const char* pName);
+    CameraPoser_RS(const char* name);
 
     virtual AreaObjDirector* getAreaObjDirector() const override;
     virtual void init();
@@ -81,7 +81,7 @@ public:
     virtual AudioKeeper* getAudioKeeper() const override;
     virtual RailRider* getRailRider() const override;
 
-    virtual void load(const ByamlIter& pTicket);
+    virtual void load(const ByamlIter& ticket);
     virtual void movement();
     virtual void calcCameraPose(sead::LookAtCamera*) const;
     virtual void requestTurnToDirection(const al::CameraTurnInfo*);

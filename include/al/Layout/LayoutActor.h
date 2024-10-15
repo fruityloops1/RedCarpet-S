@@ -7,6 +7,7 @@
 #include "al/Message/MessageSystem.h"
 #include "al/Nerve/NerveKeeper.h"
 #include "al/Scene/SceneObjHolder.h"
+#include <sead/prim/seadSafeString.h>
 
 namespace al {
 
@@ -59,9 +60,9 @@ public:
     void initSceneInfo(LayoutSceneInfo*);
 };
 
-void startAction(al::IUseLayoutAction* pUser, const char* pActionName, const char* = nullptr);
-bool isActionEnd(const al::IUseLayoutAction* pUser, const char* pActionName = nullptr);
+void startAction(al::IUseLayoutAction* user, const char* actionName, const char* = nullptr);
+bool isActionEnd(const al::IUseLayoutAction* user, const char* actionName = nullptr);
 
-void setPaneString(IUseLayout* pUser, const char* pPaneName, const char16_t* pText, u16 = 0, int = 0);
+void setPaneString(IUseLayout* user, const char* paneName, const char16_t* text, u16 = 0, int = 0);
 
 } // namespace al

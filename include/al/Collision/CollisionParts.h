@@ -8,9 +8,9 @@ class LiveActor;
 
 class CollisionParts;
 
-void validateCollisionParts(LiveActor* pActor);
-void invalidateCollisionParts(LiveActor* pActor);
+void validateCollisionParts(LiveActor* actor);
+void invalidateCollisionParts(LiveActor* actor);
 
-bool isOnGround(const LiveActor* pActor, u32, float);
+bool isOnGround(const LiveActor* actor, u32, float);
 
 } // namespace al

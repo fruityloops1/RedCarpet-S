@@ -13,8 +13,8 @@ class LiveActorGroup {
     LiveActor** mActors = nullptr;
 
 public:
-    LiveActorGroup(const char* pName, int pCapacity);
-    virtual void registerActor(LiveActor* pActor);
+    LiveActorGroup(const char* name, int capacity);
+    virtual void registerActor(LiveActor* actor);
 };
 
 } // namespace al

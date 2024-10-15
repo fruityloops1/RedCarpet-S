@@ -18,7 +18,7 @@ class EffectKeeper {
     MtxPtrHolder* mMtxPtrHolder = nullptr;
 
 public:
-    EffectKeeper(const EffectSystemInfo*, const char* pUserName, const sead::Vector3f*, const sead::Vector3f*, const sead::Matrix34f*);
+    EffectKeeper(const EffectSystemInfo*, const char* userName, const sead::Vector3f*, const sead::Vector3f*, const sead::Matrix34f*);
 };
 
 class IUseEffectKeeper {
@@ -26,6 +26,6 @@ public:
     virtual EffectKeeper* getEffectKeeper() const = 0;
 };
 
-void tryDeleteEffect(IUseEffectKeeper* pUser, const char* pEffectName);
+void tryDeleteEffect(IUseEffectKeeper* user, const char* effectName);
 
 } // namespace al

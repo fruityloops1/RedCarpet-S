@@ -13,12 +13,12 @@ class MtxConnector {
     u8 _0[0x5c];
 
 public:
-    MtxConnector(const sead::Quatf& pQuat, const sead::Vector3f& pTrans);
+    MtxConnector(const sead::Quatf& quat, const sead::Vector3f& trans);
 };
 
-MtxConnector* tryCreateMtxConnector(LiveActor* pActor, const ActorInitInfo& pInfo);
+MtxConnector* tryCreateMtxConnector(LiveActor* actor, const ActorInitInfo& info);
 
-void attachMtxConnectorToCollision(MtxConnector* pConnector, const LiveActor* pActor, bool);
-void connectPoseQT(LiveActor* pActor, const MtxConnector* pConnector);
+void attachMtxConnectorToCollision(MtxConnector* connector, const LiveActor* actor, bool);
+void connectPoseQT(LiveActor* actor, const MtxConnector* connector);
 
 } // namespace al

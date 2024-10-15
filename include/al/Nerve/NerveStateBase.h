@@ -26,7 +26,7 @@ protected:
     LiveActor* mHost = nullptr;
 
 public:
-    ActorStateBase(const char* pName, LiveActor* pHost);
+    ActorStateBase(const char* name, LiveActor* host);
     virtual ~ActorStateBase() override;
 };
 

@@ -10,9 +10,9 @@ protected:
     T* const mHost = nullptr;
 
 public:
-    HostStateBase(const char* pName, T* pHost)
-        : NerveStateBase(pName)
-        , mHost(pHost)
+    HostStateBase(const char* name, T* host)
+        : NerveStateBase(name)
+        , mHost(host)
     {
     }
 };

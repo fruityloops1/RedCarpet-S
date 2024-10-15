@@ -22,18 +22,18 @@ class AreaObjDirector {
 public:
     AreaObjDirector();
 
-    void init(const AreaObjFactory* pFactory);
+    void init(const AreaObjFactory* factory);
     void endInit();
     void update();
-    void placement(const AreaInitInfo& pInfo);
-    void placement(const AreaInitInfo* pInfo, int);
-    void createAreaObjGroup(const AreaInitInfo& pInfo);
+    void placement(const AreaInitInfo& info);
+    void placement(const AreaInitInfo* info, int);
+    void createAreaObjGroup(const AreaInitInfo& info);
     void createAreaObjGroupBuffer();
-    void placementAreaObj(const AreaInitInfo& pInfo);
+    void placementAreaObj(const AreaInitInfo& info);
 
-    AreaObjGroup* getAreaObjGroup(const char* pName);
-    bool isExistAreaGroup(const char* pName);
-    u64 getInVolumeAreaObj(const char* pName, const sead::Vector3f& pTrans);
+    AreaObjGroup* getAreaObjGroup(const char* name);
+    bool isExistAreaGroup(const char* name);
+    u64 getInVolumeAreaObj(const char* name, const sead::Vector3f& trans);
     AreaObjMtxConnecterHolder* getMtxConnecterHolder() const;
 };
 
